@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pages.CreateAccountPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding ErrorMSG}"
+                   VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="Red"/>
+
+            <Label Text="Username"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry Text="{Binding Username}" 
+                   WidthRequest="200" 
+                   BackgroundColor="LightGray" />
+
+            <Label Text="Password"
+                   VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand" />
+
+            <Entry Text="{Binding Password1}" 
+                   WidthRequest="200" 
+                   BackgroundColor="LightGray" />
+
+            <Entry Text="{Binding Password2}" 
+                   WidthRequest="200" 
+                   BackgroundColor="LightGray" />
+
+            <Button BackgroundColor="Blue" 
+                    Text="create" 
+                    Clicked="OnCreateAttempt" />
+
+            <Button BackgroundColor="LightGray" 
+                    Text="Back" 
+                    Clicked="OnBack" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:App1"
+             x:Class="App1.ListViewPage1">
+
+    <ListView x:Name="MyListView"
+            ItemsSource="{Binding Table}"
+              ItemTapped="Handle_ItemTapped"
+            >
+        
+    <!--Built in Cells-->
+        <ListView.Header>
+            <StackLayout Orientation="Vertical" >
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Log out" Clicked="OnLogOut" />
+                    <Button Text="ADD" BackgroundColor="Green" TextColor="White" Clicked="OnAddSensor"/>
+                </StackLayout>
+                
+
+
+                <StackLayout Margin="0,20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Label Text="Sensors" TextColor="DarkRed" Margin="10, 0" FontSize="20"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+        <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        
+                        <MenuItem Clicked="OnMore"
+                      CommandParameter="{Binding .}"
+                      Text="More" />
+
+                        <MenuItem Clicked="OnDelete"
+                            CommandParameter="{Binding .}"
+                            Text="Delete"
+                            IsDestructive="True"/>
+
+                    </ViewCell.ContextActions>
+                    <Frame>
+                       
+                        <StackLayout Margin="-15" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                            <Label Text="{Binding FriendlyName}" TextColor="Black" Margin="30, 0"/>
+                        </StackLayout>
+
+
+                    </Frame>
+                </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+    
+    <!--Custom View Cells-->
+    <!--
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+            <Label Text="{Binding Text}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="{Binding Detail}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    -->
+  </ListView>
+</ContentPage>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pages.DeviceSettingPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Label Text="Friendly Name" />
+                <Entry Text="{Binding FriendlyName}" />
+
+                <Label Text="Off Webhook" />
+                <Entry Text="{Binding OffWebhook}" />
+
+                <Label Text="On Webhook" />
+                <Entry Text="{Binding OnWebhook}" />
+
+                <Label Text=" Location" />
+                
+                <Label Text="Latitude" />
+                <Entry Text="{Binding Latitude}" />
+                <Label Text="{Binding NumericalErrLat}" TextColor="Red"/>
+                
+                <Label Text="Longtitude" />
+                <Entry Text="{Binding Longtitude}" />
+                <Label Text="{Binding NumericalErrLot}" TextColor="Red"/>
+
+                <Label Text="Address" />
+                <Entry Text="{Binding Address}" />
+                <Label Text="City" />
+                <Entry Text="{Binding City}" />
+                <Label Text="Country" />
+                <Entry Text="{Binding Country}" />
+
+                <Button Text="Get Coordinates" Command="{Binding getCoorsCommand}" />
+                <Label Text="{Binding LocError}" TextColor="Red"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Hour AutoSaving" HorizontalOptions="Start"/>
+                    <CheckBox IsChecked="{Binding Path=AutoSaveHour, Mode=TwoWay}" />
+                </StackLayout>
+
+                <Label Text="turn on hour" />
+                <Entry Text="{Binding TurnOnHour}" />
+                <Label Text="{Binding OnHourErr}" TextColor="Red"/>
+
+                <Label Text="turn off hour" />
+                <Entry Text="{Binding TurnOffHour}" />
+                <Label Text="{Binding OffHourErr}" TextColor="Red"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Temperature AutoSaving" HorizontalOptions="Start"/>
+                    <CheckBox IsChecked="{Binding Path=AutoSaveTemp, Mode=TwoWay}" />
+                </StackLayout>
+
+                <Label Text="turn on temp" />
+                <Entry Text="{Binding TurnOnTemp}" />
+                <Label Text="{Binding OnTempErr}" TextColor="Red"/>
+
+                <Label Text="turn off temp" />
+                <Entry Text="{Binding TurnOffTemp}" />
+                <Label Text="{Binding OffTempErr}" TextColor="Red"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Save Settings" Command="{Binding SetSettingsCommand}" />
+                    <Button Text="Back" Clicked="OnBack" />
+                </StackLayout>
+
+                <Label Text="{Binding SaveErrors}" TextColor="Red"/>
+
+                </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

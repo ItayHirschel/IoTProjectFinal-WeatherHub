@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Charter"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical">
+
+                <StackLayout  Orientation="Horizontal" VerticalOptions="Start">
+
+                    <Button 
+                    Text="Back" 
+                    BackgroundColor="LightGray" 
+                    TextColor="Black" 
+                    Padding="0" 
+                    Clicked="OnBack"
+                    HorizontalOptions="Start"/>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Phrase}" TextColor="Black" FontSize="Large" HorizontalOptions="Start" VerticalOptions="Center"/>
+                    <Image HeightRequest="100" WidthRequest="100" HorizontalOptions="End" VerticalOptions="Center">
+                        <Image.Source>
+                            <FileImageSource File="{Binding ImageSource}" />
+                        </Image.Source>
+                    </Image>
+                </StackLayout >
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Humidity}" FontSize="70" HorizontalOptions="Start" VerticalOptions="Center"/>
+                    <Label Text="%" FontSize="50" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                    <Image HeightRequest="100" WidthRequest="100" HorizontalOptions="End" VerticalOptions="Center">
+                        <Image.Source>
+                            <FileImageSource File="humidity.png"/>
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+                
+
+
+                <Label Text="{Binding LastStatus}" TextColor="Red" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="{Binding Device_fname}" HorizontalOptions="CenterAndExpand"/>
+
+
+            <Label Text="Temperature (Celsuis)" HorizontalOptions="CenterAndExpand"/>
+            <microcharts:ChartView x:Name="Chart1" Chart="{Binding TempChart}" HeightRequest="250" />
+            <Label Text="Pressure (millibars)" HorizontalOptions="CenterAndExpand"/>
+            <microcharts:ChartView x:Name="Chart2" Chart="{Binding PresChart}" HeightRequest="250" />
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pages.DeviceMenuPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding DevFName}"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+
+            <Button Text="Measurements"
+                    Clicked="OnMeasurements"
+                    BackgroundColor="LightGray"
+                    TextColor="Black" />
+
+            <Button Text="Settings"
+                    Clicked="OnSettings"
+                    BackgroundColor="LightGray"
+                    TextColor="Black" />
+
+            <Button Text="Automations"
+                    Clicked="OnAutomation"
+                    BackgroundColor="LightGray"
+                    TextColor="Black" />
+
+            <Button Text="Back"
+                    Clicked="OnBack"
+                    BackgroundColor="LightGray"
+                    TextColor="Black" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
