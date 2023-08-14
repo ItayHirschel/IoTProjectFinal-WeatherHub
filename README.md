@@ -62,6 +62,9 @@ In the automations page: press an automation to activate it. The app will activa
 ## Architecture
 ![Architecture Image](./Architecture.PNG)
 
+## Demonstrations
+
+
 ## About Us
 This Project was submitted by Yarin Schlesinger, Inal Taha and Itay Hirschel Doron as a final project in the IoT Workshop in Tel Aviv University.
 The Workshop Guides : Prof. Sivan Toledo, Dr. Nir Levy, Mr. Moab Arar.
