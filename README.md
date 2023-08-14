@@ -2,7 +2,7 @@
 
 The project gives the user the ability to control and monitor multiple properties remotely through an app.
 
-## Freatures:
+## Features:
 
 * Track weather measurements on several properties locations on the same app.
   - Temperature
@@ -22,13 +22,14 @@ The project gives the user the ability to control and monitor multiple propertie
  
 ## The Device
 
-* ESP8266 Board.
+* ESP8266 Board (With WiFi Antenna).
 * BMP280 Temperature and Air Pressure measure.
 
 ## Services Used
 
 * ### Azure IoT Hub
   For managing cloud to device messages.
+  
 * ### Azure Functions
   - #### HTTP Trigger
     For activating most of the functions
@@ -36,10 +37,13 @@ The project gives the user the ability to control and monitor multiple propertie
     For activating an automation through another function.
   - #### Timer Trigger
     For supporting the automatically managed AC activity hours.
+    
 * ### Azure signalR Service
   For syncing the information received on the app with the information stored on the cloud. Received immediate notification on extreme conditions measured by the device.
+  
 * ### Azure Storage : Data Tables
   For Storing data.
+  
 * ### Event Grid
   An Event Grid topic to activate an azure function.
 
