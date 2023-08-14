@@ -143,12 +143,12 @@ namespace App1.Services
                         if ("AutoSaveHours".Equals(subkey))
                         {
                             bool bool_temp = "true".Equals(subvalue.ToLower());
-                            dev._auto_save_temperature = bool_temp;
+                            dev._auto_save_hours = bool_temp;
                         }
                         else if ("AutoSaveTemp".Equals(subkey))
                         {
                             bool bool_temp = "true".Equals(subvalue.ToLower());
-                            dev._auto_save_hours = bool_temp;
+                            dev._auto_save_temperature = bool_temp;
                         }
                         else if ("Location".Equals(subkey))
                         {
