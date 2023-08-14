@@ -47,3 +47,5 @@ The project gives the user the ability to control and monitor multiple propertie
 * ### Event Grid
   An Event Grid topic to activate an azure function.
 
+
+
