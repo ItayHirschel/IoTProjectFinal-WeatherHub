@@ -65,8 +65,18 @@ In the automations page: press an automation to activate it. The app will activa
 ## Demonstrations
 
 
-
+### Automatic saving through setting activity hours
 https://github.com/eitaih/IoTProjectFinal/assets/79969891/7778649e-f78f-46bf-aca9-ae3557ee7c27
+
+### Automatic saving through setting boundry temperatures
+https://github.com/eitaih/IoTProjectFinal/assets/79969891/0e73ebf7-b1dc-4e5f-b251-a339546fa14f
+
+### ON / OFF Demonstration
+https://github.com/eitaih/IoTProjectFinal/assets/79969891/f441a802-5332-444d-9cd2-eb6da5a41f58
+
+### Notification Demonstration
+https://github.com/eitaih/IoTProjectFinal/assets/79969891/39873880-cefe-4f7f-8670-0ce66a32d909
+
 
 
 
