@@ -1,6 +1,15 @@
 # Weather Hub
 
-The project gives the user the ability to control and monitor multiple properties remotely through an app.
+The project gives the user the ability to control and monitor climate at multiple properties remotely through an app, all at one place - concentrated.
+
+## How Does It Work ?
+
+Connect your device to the WiFi network where your Home Assistant System is located.
+
+Creating an account is done through the app.
+Each device comes with a unique number, enter the serial number and friendly name to register the new device.
+Through the device's settings manage location, activity hours and boundry temperatures, enter a turn on/off webhooks specific to the device.
+In the automations page: press an automation to activate it. The app will activate a function which in turn will send a webhook to your device which will send an http request to activate an automation through the said webhook.
 
 ## Features:
 
@@ -47,6 +56,11 @@ The project gives the user the ability to control and monitor multiple propertie
 * ### Event Grid
   An Event Grid topic to activate an azure function.
 
+* ### Azure Maps
+  Getting coordinates for given address, and getting current weather conditions at said coordinates.
+
 ## Architecture
 ![Architecture Image](./Architecture.PNG)
+
+
 
