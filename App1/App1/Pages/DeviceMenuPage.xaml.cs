@@ -21,25 +21,25 @@ namespace App1.Pages
 
         public void OnBack(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new ListViewPage1());
+            App.NavigationService.NavigateToPageAsync(new ListViewPage1());
         }
 
         public void OnSettings(object sender, EventArgs e)
         {
             DeviceModel model = ((DeviceMenuViewModel)BindingContext).CurrDevice;
-            Navigation.PushModalAsync(new DeviceSettingPage(model));
+            App.NavigationService.NavigateToPageAsync(new DeviceSettingPage(model));
         }
 
         public void OnMeasurements(object sender, EventArgs e)
         {
             DeviceModel model = ((DeviceMenuViewModel)BindingContext).CurrDevice;
-            Navigation.PushModalAsync(new Charter(model));
+            App.NavigationService.NavigateToPageAsync(new Charter(model));
         }
 
         public void OnAutomation(object sender, EventArgs e)
         {
             DeviceModel model = ((DeviceMenuViewModel)BindingContext).CurrDevice;
-            Navigation.PushModalAsync(new WebhookListPage(model));
+            App.NavigationService.NavigateToPageAsync(new WebhookListPage(model));
         }
     }
 }

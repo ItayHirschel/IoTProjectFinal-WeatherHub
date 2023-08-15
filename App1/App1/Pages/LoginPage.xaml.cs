@@ -28,13 +28,13 @@ namespace App1.Pages
             if (cont.isLoggedIn())
 			{
 
-                await Navigation.PushModalAsync(new ListViewPage1());
+                await App.NavigationService.NavigateToPageAsync(new ListViewPage1());
 			}
         }
 
         public async void OnCreate(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new CreateAccountPage());
+            await App.NavigationService.NavigateToPageAsync(new CreateAccountPage());
         }
     }
 }

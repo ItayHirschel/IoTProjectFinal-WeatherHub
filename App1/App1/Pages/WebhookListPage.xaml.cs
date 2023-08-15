@@ -17,6 +17,9 @@ namespace App1.Pages
 
         public WebhookListPage(DeviceModel dev)
         {
+            Console.WriteLine(dev.Name);
+            Console.WriteLine(dev.FriendlyName);
+
             this.BindingContext = new WebhookListViewModel(dev);
             InitializeComponent();
 
@@ -38,13 +41,13 @@ namespace App1.Pages
             ((ListView)sender).SelectedItem = null;
         }
 
-        public void OnBack(object sender, EventArgs e)
+        public async void OnBack(object sender, EventArgs e)
         {
             DeviceModel dev = ((WebhookListViewModel)BindingContext).currDevice;
-            Navigation.PushModalAsync(new DeviceMenuPage(dev));
+            await App.NavigationService.NavigateToPageAsync(new DeviceMenuPage(dev));
         }
 
-        public void OnDelete(object sender, EventArgs e)
+        public async void OnDelete(object sender, EventArgs e)
         {
             var mi = ((MenuItem)sender);
             WebhookAutomationModel webby = ((WebhookAutomationModel)mi.CommandParameter);
@@ -57,7 +60,7 @@ namespace App1.Pages
         public void OnAddWebhook(object sender, EventArgs e)
         {
             DeviceModel dev = ((WebhookListViewModel)BindingContext).currDevice;
-            Navigation.PushModalAsync(new AddWebhookPage(dev));
+            App.NavigationService.NavigateToPageAsync(new AddWebhookPage(dev));
         }
     }
 }

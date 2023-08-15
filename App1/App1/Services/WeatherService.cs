@@ -71,6 +71,10 @@ namespace App1.Services
 
                 var MSG = await responseMSG.Content.ReadAsStringAsync();
 
+                Dictionary<string,string> data = new Dictionary<string,string>();
+
+                data["Device"] = dev.Name;
+
                 lock (prevPrecipitationLock)
                 {
                     if (!prevPrecipitation.ContainsKey(dev.Name))
@@ -86,7 +90,7 @@ namespace App1.Services
                         {
                             localNotification.ShowNotification("Weather Update",
                                 "Precipitation had stopped in the location of device : " + dev.FriendlyName,
-                                new Dictionary<string, string>());
+                                data);
 
                         }
 
@@ -99,7 +103,7 @@ namespace App1.Services
                         {
                             localNotification.ShowNotification("Weather Update",
                                 "Precipitation had started in the location of device : " + dev.FriendlyName,
-                                new Dictionary<string, string>());
+                                data);
                         }
 
                         prevPrecipitation[dev.Name] = true;
@@ -193,11 +197,14 @@ namespace App1.Services
             connection.On<string>("InformWeatherWarm", (message) =>
             {
                 DeviceModel dev = DeviceService.getDevice(message);
+                Dictionary<string, string> data = new Dictionary<string, string>();
+
+                data["Device"] = dev.Name;
                 if (dev != null)
                 {
                     localNotification.ShowNotification("Weather Update",
                                 "Temperature near " + dev.FriendlyName + " is currently warm",
-                                new Dictionary<string, string>());
+                                data);
                 }
                 
             });
@@ -205,11 +212,13 @@ namespace App1.Services
             connection.On<string>("InformWeatherCold", (message) =>
             {
                 DeviceModel dev = DeviceService.getDevice(message);
+                Dictionary<string, string> data = new Dictionary<string, string>();
+                data["Device"] = dev.Name;
                 if (dev != null)
                 {
                     localNotification.ShowNotification("Weather Update",
                                 "Temperature near " + dev.FriendlyName + " is currently cold",
-                                new Dictionary<string, string>());
+                                data);
                 }
             });
 

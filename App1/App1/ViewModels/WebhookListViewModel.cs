@@ -44,6 +44,7 @@ namespace App1.ViewModels
 
         public WebhookListViewModel(DeviceModel device)
         {
+            WebhookService.updateFromDevService();
             this.currDevice = device;
 
             getwebhooks();

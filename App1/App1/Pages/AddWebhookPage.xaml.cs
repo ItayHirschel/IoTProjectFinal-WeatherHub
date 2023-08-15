@@ -23,13 +23,13 @@ namespace App1.Pages
         {
             ((NewWebhookViewModel)this.BindingContext).AddButtonHandler();
             DeviceModel model = ((NewWebhookViewModel)this.BindingContext).currDevice;
-            await Navigation.PushModalAsync(new WebhookListPage(model));
+            await App.NavigationService.NavigateToPageAsync(new WebhookListPage(model));
         }
 
         public async void OnBack(object sender, EventArgs e)
         {
             DeviceModel model = ((NewWebhookViewModel)this.BindingContext).currDevice;
-            await Navigation.PushModalAsync(new WebhookListPage(model));
+            await App.NavigationService.NavigateToPageAsync(new WebhookListPage(model));
         }
     }
 }

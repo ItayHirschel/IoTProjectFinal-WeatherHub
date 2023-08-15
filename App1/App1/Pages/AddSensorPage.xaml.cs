@@ -24,13 +24,13 @@ namespace App1.Pages
 			await ((NewSensorViewModel)this.BindingContext).AddButtonHandler();
 			if (((NewSensorViewModel)this.BindingContext).success) 
 			{ 
-				await Navigation.PushModalAsync(new ListViewPage1()); 
+				await App.NavigationService.NavigateToPageAsync(new ListViewPage1()); 
 			}
         }
 
         public void OnBack(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new ListViewPage1());
+            App.NavigationService.NavigateToPageAsync(new ListViewPage1());
         }
     }
 }

@@ -33,13 +33,13 @@ namespace App1
                 return;
 
             var mi = e.Item as DeviceModel;
-            await Navigation.PushModalAsync(new DeviceMenuPage(mi));
+            await App.NavigationService.NavigateToPageAsync(new DeviceMenuPage(mi));
         }
 
         public void OnMore(object sender, EventArgs e)
         {
             var mi = ((MenuItem)sender);
-            Navigation.PushModalAsync(new DeviceMenuPage((DeviceModel)mi.CommandParameter));
+            App.NavigationService.NavigateToPageAsync(new DeviceMenuPage((DeviceModel)mi.CommandParameter));
         }
 
         public void OnDelete(object sender, EventArgs e)
@@ -61,12 +61,12 @@ namespace App1
 
             DeviceService.Reset();
 
-            Navigation.PushModalAsync(new LoginPage());
+            App.NavigationService.NavigateToPageAsync(new LoginPage());
         }
 
         public void OnAddSensor(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new AddSensorPage());
+            App.NavigationService.NavigateToPageAsync(new AddSensorPage());
         }
 
 

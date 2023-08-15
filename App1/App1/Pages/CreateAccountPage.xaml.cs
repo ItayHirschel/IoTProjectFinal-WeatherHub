@@ -27,13 +27,13 @@ namespace App1.Pages
 
             if (cont.create_success)
             {
-                await Navigation.PushModalAsync(new LoginPage());
+                await App.NavigationService.NavigateToPageAsync(new LoginPage());
             }
         }
 
         public async void OnBack(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new LoginPage());
+            await App.NavigationService.NavigateToPageAsync(new LoginPage());
         }
     }
 }

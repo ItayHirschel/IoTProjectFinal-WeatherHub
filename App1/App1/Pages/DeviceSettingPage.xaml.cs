@@ -22,7 +22,7 @@ namespace App1.Pages
         public void OnBack(object sender, EventArgs e)
         {
             DeviceModel model = ((DeviceSettingsViewModel)BindingContext)._curr_device;
-            Navigation.PushModalAsync(new DeviceMenuPage(model));
+            App.NavigationService.NavigateToPageAsync(new DeviceMenuPage(model));
         }
     }
 }
