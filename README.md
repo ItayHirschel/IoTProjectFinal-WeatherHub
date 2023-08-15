@@ -75,7 +75,9 @@ https://github.com/eitaih/IoTProjectFinal/assets/79969891/0e73ebf7-b1dc-4e5f-b25
 https://github.com/eitaih/IoTProjectFinal/assets/79969891/f441a802-5332-444d-9cd2-eb6da5a41f58
 
 ### Notification Demonstration
-https://github.com/eitaih/IoTProjectFinal/assets/79969891/39873880-cefe-4f7f-8670-0ce66a32d909
+https://github.com/eitaih/IoTProjectFinal/assets/79969891/a9f75056-5077-45d8-b031-c00d2e234634
+
+
 
 
 
