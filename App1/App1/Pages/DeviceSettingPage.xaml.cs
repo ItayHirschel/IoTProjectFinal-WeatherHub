@@ -17,6 +17,7 @@ namespace App1.Pages
         {
             this.BindingContext = new DeviceSettingsViewModel(model);
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         public void OnBack(object sender, EventArgs e)

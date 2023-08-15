@@ -56,9 +56,9 @@ namespace App1.Droid.Services
             intent.PutExtra(TITLE_KEY, title);
             intent.PutExtra(MESSAGE_KEY, message);
 
-            intent.AddFlags(ActivityFlags.SingleTop);
+            intent.AddFlags(ActivityFlags.NewTask | ActivityFlags.SingleTop);
 
-            foreach(var key in data.Keys ) 
+            foreach (var key in data.Keys ) 
             {
                 intent.PutExtra(key, data[key]);
             }

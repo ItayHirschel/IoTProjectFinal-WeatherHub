@@ -17,6 +17,7 @@ namespace App1.Pages
 		{
 			this.BindingContext = new NewSensorViewModel();
 			InitializeComponent ();
+			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
 		public async void OnAddButton(object sender, EventArgs e)

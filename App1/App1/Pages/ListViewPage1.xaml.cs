@@ -23,7 +23,7 @@ namespace App1
         public ListViewPage1()
         {
             InitializeComponent();
-
+            NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new DeviceListViewModel();
         }
 

@@ -17,11 +17,11 @@ namespace App1.Pages
 
         public WebhookListPage(DeviceModel dev)
         {
-            Console.WriteLine(dev.Name);
-            Console.WriteLine(dev.FriendlyName);
+
 
             this.BindingContext = new WebhookListViewModel(dev);
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
         }
 

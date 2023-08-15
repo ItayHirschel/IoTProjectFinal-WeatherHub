@@ -17,7 +17,8 @@ namespace App1.Pages
 		{
 			InitializeComponent ();
 			this.BindingContext = new LoginViewModel();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         public async void OnLoginAttempt(object sender, EventArgs e)
         {

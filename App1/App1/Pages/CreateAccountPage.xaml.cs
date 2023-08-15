@@ -17,7 +17,8 @@ namespace App1.Pages
 		{
 			this.BindingContext = new CreateAccountViewModel();
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         public async void OnCreateAttempt(object sender, EventArgs e)
         {
